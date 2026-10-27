@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="VidEdit3D: Flexible 3D Gaussian Editing with Video Diffusion. Turn an edited anchor view into a coherent 3D scene with trajectory-guided video editing.">
+  <meta property="og:title" content="VidEdit3D: Flexible 3D Gaussian Editing with Video Diffusion">
+  <meta property="og:description" content="Explore 3D scene edits, moving comparisons, and the VidEdit3D pipeline.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://2hitee.github.io/VidEdit3D-page/">
+  <meta property="og:image" content="media/hero.jpg?v=8b82199ee294">
+  <title>VidEdit3D: Flexible 3D Gaussian Editing with Video Diffusion</title>
+  <link rel="canonical" href="https://2hitee.github.io/VidEdit3D-page/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js?v=f873e8a2793c"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <main id="main">
+    <section class="hero section-wrap" id="top" aria-labelledby="title">
+      <h1 id="title">VidEdit3D: Flexible 3D Gaussian Editing <br>with Video Diffusion</h1>
+      <div class="authors">
+        <a href="https://2hitee.github.io/">Yanming Yang<sup>1</sup></a>
+        <a href="http://chenxi-song.github.io/">Chenxi Song<sup>1</sup></a>
+        <a href="http://tongzhao1030.github.io/">Tong Zhao<sup>1</sup></a>
+        <a href="https://openreview.net/profile?id=~Juntao_Xu1">Juntao Xu<sup>1</sup></a>
+        <a href="https://openreview.net/profile?id=~Wenhao_Rao1">Wenhao Rao<sup>2</sup></a>
+        <a href="https://buaacyw.github.io/">Yiwen Chen<sup>3</sup></a>
+        <a href="https://wangywust.github.io/">Yiwei Wang<sup>4</sup></a>
+        <a href="https://icoz69.github.io/">Chi Zhang<sup>1,†</sup></a>
+      </div>
+      <p class="affiliations"><span><sup>1</sup> Westlake University</span><span><sup>2</sup> University of Leeds</span><span><sup>3</sup> Nanyang Technological University</span><span><sup>4</sup> University of California, Merced</span></p>
+      <p class="corresponding">† Corresponding author</p>
+      <div class="paper-links" aria-label="Research links">
+        <a class="pill dark" href="https://arxiv.org/abs/2610.35756"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 3 10 14M13 3 5 14m8-5 2-3"/></svg>arXiv</a>
+        <a class="pill dark" href="https://arxiv.org/pdf/2610.35756"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2h7l4 4v12H5zM12 2v5h4M8 10h5m-5 3h5"/></svg>Paper</a>
+        <a class="pill dark" href="https://github.com/2hiTee/VidEdit3D" title="Code repository"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5-5 5 5 5m6-10 5 5-5 5m-2-12-2 14"/></svg>Code</a>
+      </div>
+      <figure class="hero-film">
+        <video id="hero-video" muted playsinline loop autoplay preload="metadata" poster="media/hero.jpg?v=8b82199ee294" aria-label="Overview of 22 edited 3D scenes"><source src="media/hero.mp4?v=9831fd246201" type="video/mp4"></video>
+        <figcaption><span>Qualitative results of VidEdit3D.</span><button class="play-control" id="hero-play" type="button" aria-label="Pause overview animation"><span class="control-icon" aria-hidden="true">Ⅱ</span><span class="control-text">Pause</span></button></figcaption>
+      </figure>
+      <p class="teaser-caption">VidEdit3D propagates an edit from a single anchor view to a 3D Gaussian scene, supporting object additions, removals, appearance changes, and user-provided references.</p>
+    </section>
+
+    <section class="method-section" id="method" aria-labelledby="method-heading"><div class="section-wrap">
+      <div class="section-heading"><h2 id="method-heading">Method</h2></div>
+      <p class="method-intro">VidEdit3D reformulates 3D scene editing as trajectory-based video editing. Starting with a reconstructed scene and a user-edited anchor, it organizes smooth camera paths, propagates the edit across their rendered views, and refines the 3D representation.</p>
+      <figure class="pipeline"><a href="media/pipeline.png" target="_blank" rel="noopener" aria-label="Open the pipeline figure at full resolution"><img src="media/pipeline.png" alt="VidEdit3D pipeline: Trajectory-Guided Rendering organizes source views into video clips, Flow-Aligned Video Editing propagates an anchor edit, and Region-Selective 3DGS Refinement updates target Gaussians." loading="lazy"></a><figcaption>Overview of VidEdit3D. <span><a href="media/pipeline.pdf" target="_blank" rel="noopener">Vector PDF ↗</a></span></figcaption></figure>
+      <p class="method-description"><strong>Trajectory-Guided Rendering (TGR)</strong> selects target-supported views and constructs smooth video clips. <strong>Flow-Aligned Video Editing (FAVE)</strong> propagates the anchor edit with a pretrained video diffusion model and Editing Consistency Guidance. <strong>Region-Selective 3DGS Refinement (RS-GS)</strong> transfers the edited frames back into 3D while restricting updates to the target Gaussians.</p>
+    </div></section>
+
+    <section class="demo-section section-wrap" id="demo" aria-labelledby="demo-heading">
+      <div class="section-heading"><h2 id="demo-heading">Demo</h2></div>
+      <div class="demo-frame"><video id="full-demo" controls playsinline preload="none" poster="media/hero.jpg?v=8b82199ee294" aria-label="VidEdit3D complete demonstration"><source src="media/full-demo.mp4?v=665fae08755d" type="video/mp4"></video><button class="demo-play" id="demo-play" type="button" hidden><span class="play-disc" aria-hidden="true">▶</span><span>Play demo<small>3 minutes</small></span></button></div>
+    </section>
+
+    <section class="results-section" id="results" aria-labelledby="results-heading">
+      <div class="section-wrap">
+        <div class="section-heading"><h2 id="results-heading">Editing Results</h2><p>Select a case to view the source and edited scenes along the same camera trajectory.</p></div>
+        <div class="case-controls"><div class="filter-group" role="group" aria-label="Filter cases"><button type="button" class="filter active" data-filter="all" aria-pressed="true">Examples</button><button type="button" class="filter" data-filter="scene" aria-pressed="false">Objects & scenes</button><button type="button" class="filter" data-filter="portrait" aria-pressed="false">People</button><button type="button" class="filter" data-filter="reference" aria-pressed="false">User provided</button></div><span class="case-position" id="case-position" aria-live="polite"></span></div>
+        <div class="case-stage" id="case-stage" aria-busy="true">
+          <div class="case-caption"><div><p class="stage-kicker" id="case-category">3D scene editing</p><h3 id="case-prompt">Loading results…</h3></div><div class="case-arrows"><button id="previous-case" class="circle-button" type="button" aria-label="Previous case">←</button><button id="next-case" class="circle-button" type="button" aria-label="Next case">→</button></div></div>
+          <div class="paired-videos"><figure><figcaption>Source</figcaption><video id="source-video" muted playsinline loop preload="metadata" aria-label="Original 3D scene"></video></figure><figure><figcaption class="ours-label">Ours</figcaption><video id="ours-video" muted playsinline loop preload="metadata" aria-label="Edited 3D scene"></video></figure></div>
+          <div class="case-playback"><button class="play-control" id="case-play" type="button" aria-label="Pause case videos"><span class="control-icon" aria-hidden="true">Ⅱ</span><span class="control-text">Pause</span></button><label class="visually-hidden" for="case-scrub">View position</label><input type="range" id="case-scrub" min="0" max="1000" value="0"><span class="view-label">Explore views</span><button id="case-expand" class="expand-button" type="button" aria-label="Expand selected case">Expand <span aria-hidden="true">↗</span></button></div>
+          <figure class="user-reference" id="case-reference" hidden><img id="reference-image" alt="User provided editing reference"><figcaption><span>User provided</span></figcaption></figure>
+        </div>
+        <p id="results-error" hidden role="status">The cases could not be loaded. Please reload the page; the full demo above remains available.</p>
+        <div class="case-grid" id="case-grid" aria-label="Choose an editing result"></div>
+        <noscript><p>Enable JavaScript to browse all editing cases. The full demo above includes the complete results.</p></noscript>
+      </div>
+    </section>
+
+    <section class="comparison-section section-wrap" id="comparisons" aria-labelledby="comparison-heading">
+      <div class="section-heading"><h2 id="comparison-heading">Comparisons</h2><p>Each example shows the source scene, four baselines, and our result.</p></div>
+      <div class="comparison-tabs" id="comparison-tabs" role="group" aria-label="Choose a comparison"></div>
+      <div class="comparison-toolbar"><span>Source · Baseline · Ours</span><button type="button" class="play-control" id="comparison-play" aria-label="Play comparison"><span class="control-icon" aria-hidden="true">▶</span><span class="control-text">Play</span></button></div>
+      <div class="comparison-frame"><video id="comparison-video" controls playsinline muted loop preload="none" aria-label="Video comparison of source, baselines, and VidEdit3D"></video></div>
+    </section>
+
+
+    <section class="citation-section section-wrap" id="citation" aria-labelledby="citation-heading">
+      <div class="section-heading"><h2 id="citation-heading">Citation</h2><p>If you find this work useful, please consider citing:</p></div>
+      <div class="citation-block"><div class="code-title"><span>BibTeX</span><button type="button" id="copy-citation">Copy citation <span aria-hidden="true">⧉</span></button></div><pre><code id="bibtex">@misc{yang2026videdit3dflexible3dgaussian,
+  title={VidEdit3D: Flexible 3D Gaussian Editing with Video Diffusion},
+  author={Yanming Yang and Chenxi Song and Tong Zhao and Juntao Xu and Wenhao Rao and Yiwen Chen and Yiwei Wang and Chi Zhang},
+  year={2026},
+  eprint={2610.35756},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2610.35756},
+}</code></pre><span id="copy-status" class="visually-hidden" role="status"></span></div>
+    </section>
+  </main>
+  <footer class="site-footer section-wrap"><a href="#top" class="wordmark" aria-label="Back to top"><img src="media/wordmark.webp" width="150" height="58" alt="VidEdit3D" loading="lazy"></a><a href="mailto:yangyanming@westlake.edu.cn">Contact: yangyanming@westlake.edu.cn</a></footer>
+  <dialog id="case-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><h2 id="dialog-title">3D editing result</h2><button id="close-dialog" type="button" class="circle-button" aria-label="Close expanded result">×</button></div><div id="dialog-content"></div></dialog>
+</body>
+</html>

@@ -1,0 +1,1269 @@
+{
+  "version": 1,
+  "title": "VidEdit3D: Flexible 3D Gaussian Editing with Video Diffusion",
+  "hero": {
+    "video": "media/hero.mp4",
+    "poster": "media/hero.jpg",
+    "duration": 5,
+    "loop": true,
+    "media": {
+      "sha256": "9831fd246201b45f7ca8a7414e213497d425160966895e60a3f6abd3b57747fc",
+      "bytes": 1390206,
+      "width": 1440,
+      "height": 810,
+      "frames": 150,
+      "fps": "30/1",
+      "duration": 5.0,
+      "audio": false
+    }
+  },
+  "fullDemo": {
+    "video": "media/full-demo.mp4",
+    "poster": "media/hero.jpg",
+    "duration": 180.5,
+    "media": {
+      "sha256": "665fae08755d53aecb56556d403765787e53824bfbcd091cb597c8346d6ee8c8",
+      "bytes": 19753831,
+      "width": 1280,
+      "height": 720,
+      "frames": 5415,
+      "fps": "30/1",
+      "duration": 180.5,
+      "audio": true
+    }
+  },
+  "cases": [
+    {
+      "id": "bonsai_cyan_pot",
+      "label": "Cyan planter",
+      "title": "Make the planter turquoise-cyan",
+      "prompt": "Make the planter turquoise-cyan",
+      "category": "bonsai",
+      "source": "media/cases/bonsai_cyan_pot/source.mp4",
+      "ours": "media/cases/bonsai_cyan_pot/ours.mp4",
+      "poster": "media/cases/bonsai_cyan_pot/poster.jpg",
+      "sourcePoster": "media/cases/bonsai_cyan_pot/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "50ca89cc73338175c10df39569e686057c0c9b41600b6cbd0347fcc23180c9d1",
+        "ours_video_sha256": "eeba85572a6aa57ca64b89412a32d408183c7d3391a422b3021fe5db206b76bd",
+        "camera_path_sha256": "f888e3e754c1d84319732e1e091379cbb59b81001c908f754d327e99783153db",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render"
+      },
+      "media": {
+        "source": {
+          "sha256": "7db625027d8e0b592917562cdb0c754ecbabd362d32ccc611acbcfa6cf93cbf9",
+          "bytes": 776140,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "74e56d9f7128b92dc903c28ed53bd8584ebdd2635c7dd491af4ac4ae3ffdce4d",
+          "bytes": 781178,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "horse_saddle",
+      "label": "Blue saddle blanket",
+      "title": "Add a blue saddle blanket with a gold border",
+      "prompt": "Add a blue saddle blanket with a gold border",
+      "category": "horse",
+      "source": "media/cases/horse_saddle/source.mp4",
+      "ours": "media/cases/horse_saddle/ours.mp4",
+      "poster": "media/cases/horse_saddle/poster.jpg",
+      "sourcePoster": "media/cases/horse_saddle/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "2bc5cdb4aa01aadeb9b0fa1ff6a2b8bf60783c9a80ad1b9f53723b5fd26289c0",
+        "ours_video_sha256": "20e9863e5f0dd66cdee5490b910b00d3ad794ad94c35ba239995f08c7446ca2e",
+        "camera_path_sha256": "cc271141d13aa090eaae66e8d7db8eb4f7859525eed16df6995dd15ac5591c5a",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render"
+      },
+      "media": {
+        "source": {
+          "sha256": "673eeba27b7326642257c25766ddf00c47a76cf85bbee6844c7df639f5100f02",
+          "bytes": 708989,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "88aa2f1aa838c0de55ef4a192dee954bf5cda4d3a61922af8fad138126686c0d",
+          "bytes": 705221,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "fangzhou_elf",
+      "label": "Elf ears and green eyes",
+      "title": "Add pointed ears and green eyes",
+      "prompt": "Add pointed ears and green eyes",
+      "category": "fangzhou",
+      "source": "media/cases/fangzhou_elf/source.mp4",
+      "ours": "media/cases/fangzhou_elf/ours.mp4",
+      "poster": "media/cases/fangzhou_elf/poster.jpg",
+      "sourcePoster": "media/cases/fangzhou_elf/source.jpg",
+      "duration": 16.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "de1d52a752e7c5e3e6006eff5d8c5fe7bd1b70e44c698566bebd4471104d5d56",
+        "ours_video_sha256": "3d8afcf125b43a8296435ccf9bdefe1e7b88f481a7e7a9a694f5b2c401f9c9d3",
+        "camera_path_sha256": "37f590c6b808c8c1b8198d6942902bd7c8c3c192d11474e8dd7deef7846d0840",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 0.5,
+        "render_stage": "final_edited_3d_render"
+      },
+      "media": {
+        "source": {
+          "sha256": "8db1de94e4b1c95ad20577e4960a6c40ce96caa8637af0f4a2e9e84cf0312b03",
+          "bytes": 539440,
+          "width": 768,
+          "height": 384,
+          "frames": 480,
+          "fps": "30/1",
+          "duration": 16.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "80beca7fc1c0305d45a3bffc9f45ca3fd7aae61ff730d25220b69f5967334067",
+          "bytes": 535242,
+          "width": 768,
+          "height": 384,
+          "frames": 480,
+          "fps": "30/1",
+          "duration": 16.0,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "fangzhou_eyes_remote",
+      "label": "Larger eyes",
+      "title": "Enlarge his eyes",
+      "prompt": "Enlarge his eyes",
+      "category": "fangzhou",
+      "source": "media/cases/fangzhou_elf/source.mp4",
+      "ours": "media/cases/fangzhou_eyes_remote/ours.mp4",
+      "poster": "media/cases/fangzhou_eyes_remote/poster.jpg",
+      "sourcePoster": "media/cases/fangzhou_elf/source.jpg",
+      "duration": 16.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "de1d52a752e7c5e3e6006eff5d8c5fe7bd1b70e44c698566bebd4471104d5d56",
+        "ours_video_sha256": "648c13995fd4218d52cddabb10d61687cec8134618534140358c2d042ce17506",
+        "camera_path_sha256": "e985f3862170a6cb76f7ee4a313280099f6c41cf519baea988674f3870ce1bfc",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 0.5,
+        "render_stage": "final_edited_3d_render"
+      },
+      "media": {
+        "source": {
+          "sha256": "8db1de94e4b1c95ad20577e4960a6c40ce96caa8637af0f4a2e9e84cf0312b03",
+          "bytes": 539440,
+          "width": 768,
+          "height": 384,
+          "frames": 480,
+          "fps": "30/1",
+          "duration": 16.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "6e4ff3c8535b00612eb5764a8b456d09b6af09272c918c03d3aad5b317e6b2ad",
+          "bytes": 537444,
+          "width": 768,
+          "height": 384,
+          "frames": 480,
+          "fps": "30/1",
+          "duration": 16.0,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "fangzhou_nose_remote",
+      "label": "Aquiline nose",
+      "title": "Give him an aquiline nose",
+      "prompt": "Give him an aquiline nose",
+      "category": "fangzhou",
+      "source": "media/cases/fangzhou_elf/source.mp4",
+      "ours": "media/cases/fangzhou_nose_remote/ours.mp4",
+      "poster": "media/cases/fangzhou_nose_remote/poster.jpg",
+      "sourcePoster": "media/cases/fangzhou_elf/source.jpg",
+      "duration": 16.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "de1d52a752e7c5e3e6006eff5d8c5fe7bd1b70e44c698566bebd4471104d5d56",
+        "ours_video_sha256": "e1d7eec6c7fffabb2730b536ad220a06dd7dbd7c2d8c8673d7817d962aacf933",
+        "camera_path_sha256": "00e611f5dbaa5ac46365f21f2a68ccdaba9b39c1e4d05b69cd7f5485f57f7212",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 0.5,
+        "render_stage": "final_edited_3d_render"
+      },
+      "media": {
+        "source": {
+          "sha256": "8db1de94e4b1c95ad20577e4960a6c40ce96caa8637af0f4a2e9e84cf0312b03",
+          "bytes": 539440,
+          "width": 768,
+          "height": 384,
+          "frames": 480,
+          "fps": "30/1",
+          "duration": 16.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "7882fabec5efd6bd01bb3c6bc6d8bb008dfc3a89bb2bf070d514c449d735fb4f",
+          "bytes": 531912,
+          "width": 768,
+          "height": 384,
+          "frames": 480,
+          "fps": "30/1",
+          "duration": 16.0,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "face_reference_sunglasses_ppt",
+      "label": "Reference glasses",
+      "title": "Man wearing a pair of glasses",
+      "prompt": "Man wearing a pair of glasses",
+      "category": "face",
+      "source": "media/cases/face_reference_sunglasses_ppt/source.mp4",
+      "ours": "media/cases/face_reference_sunglasses_ppt/ours.mp4",
+      "poster": "media/cases/face_reference_sunglasses_ppt/poster.jpg",
+      "sourcePoster": "media/cases/face_reference_sunglasses_ppt/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "79d88291889e9a75caec3b54d336ddd162d2cb9b242c4e45cb79583e652a44e9",
+        "ours_video_sha256": "d5d2975b49ccdab40afb0d0d523d80e564346682e86fa69f00efc4cd3178d8c7",
+        "camera_path_sha256": "6591ff1ffb546cf7e55e815387b5b2a511423b43aece1ec5f74663e231097988",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render"
+      },
+      "reference": {
+        "src": "media/cases/face_reference_sunglasses_ppt/reference.png",
+        "label": "User provided",
+        "sha256": "c58cad3389af4c2c6658bb1729682c7558746ebfb060f3bb6d29eb5c01a356cc",
+        "provenance": "Original user-provided image from the demo manifest; bytes unchanged."
+      },
+      "media": {
+        "source": {
+          "sha256": "8827ac29be148406c4186aee9dd8bdcb62f617d8e5b356893d3536d536ec8424",
+          "bytes": 680764,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "8817156ce455ac0ebfc5ed1563df4739b93ada5a047de475b8ed1e6ad4da36c8",
+          "bytes": 601911,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "garden_novase",
+      "label": "Remove the vase",
+      "title": "Remove the vase",
+      "prompt": "Remove the vase",
+      "category": "garden",
+      "source": "media/cases/garden_novase/source.mp4",
+      "ours": "media/cases/garden_novase/ours.mp4",
+      "poster": "media/cases/garden_novase/poster.jpg",
+      "sourcePoster": "media/cases/garden_novase/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "5759e8694e88bbd9a703706b4125a47db7c4158ed62f2a882b4fed94f7a07fae",
+        "ours_video_sha256": "971e9a1f48bd83d00809a4d46d8bbba0401e8d8b0adf9397344c12c227c469b7",
+        "camera_path_sha256": "b064136372daae0adb72a7209adcd117f13a9056fefa6f59462d373bfec8b000",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 2175,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/garden_novase/comparison.mp4",
+      "comparisonPoster": "media/cases/garden_novase/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "ee6e4673ade4d8f3bb91c2d4f880c83aa136aab3df43d879c110f21c66bed50f",
+          "bytes": 839262,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "611ab399f0f2c9416423e7ecf3fef2e8d4c98a67962cd480a8fc9f8555ba5d58",
+          "bytes": 818223,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "97ec546c940920d5afe3eb93d0f9f430c657b9dcf17d7cea22b1fdc845442d8f",
+          "bytes": 1596791,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "person_hat2",
+      "label": "Red hat",
+      "title": "Add a red hat",
+      "prompt": "Add a red hat",
+      "category": "person",
+      "source": "media/cases/person_hat2/source.mp4",
+      "ours": "media/cases/person_hat2/ours.mp4",
+      "poster": "media/cases/person_hat2/poster.jpg",
+      "sourcePoster": "media/cases/person_hat2/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "92e31f86a3e8a3649ebb42ffab1400a5c9155d3cfb1849c2a72759f21ae29b59",
+        "ours_video_sha256": "3800d351a912b080eba98a8c930878e57cd30d28518e49b09187e75a65da32ea",
+        "camera_path_sha256": "7fd9b09d70f33bf28686837b55de441493a27e655a364bc1ee3e265a8b93581d",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 2400,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/person_hat2/comparison.mp4",
+      "comparisonPoster": "media/cases/person_hat2/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "8a136baa76f38f36d8255f4c3ca0ce50dbbd07d1e7bf886cff60485cf4079b61",
+          "bytes": 350119,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "20cc9e551268624c204cf29a077048a68ec197bceed770dabc7010ac4811e30b",
+          "bytes": 350325,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "569b5dd47accba0f5de78f0485b58fd265d4135a6b7818f54689981d70a312da",
+          "bytes": 1066683,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "dog_bandana_blue",
+      "label": "Red bandana",
+      "title": "Add a red bandana",
+      "prompt": "Add a red bandana",
+      "category": "dog",
+      "source": "media/cases/dog_bandana_blue/source.mp4",
+      "ours": "media/cases/dog_bandana_blue/ours.mp4",
+      "poster": "media/cases/dog_bandana_blue/poster.jpg",
+      "sourcePoster": "media/cases/dog_bandana_blue/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "2a695b968527dc9b5858d6065315b337259e79f1f22f5e1478c055f6560fff77",
+        "ours_video_sha256": "f45aa070ca359bee1e8c9c4fd30f43ca9d50fc0f52cb05dc8ffc6fcf7f421d3d",
+        "camera_path_sha256": "4c1825079876ba236dad7572838e5ef7da3cac02d1b832236c049f6607ad8069",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 2625,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/dog_bandana_blue/comparison.mp4",
+      "comparisonPoster": "media/cases/dog_bandana_blue/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "b066617c1ad6ed155cbc8567264901fd8125085549968d1a30b8b57d459a65bc",
+          "bytes": 363150,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "d864fb12844f206c857b42def758e6c434d1a8c5513342521b7c50cec59095ed",
+          "bytes": 335618,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "bbe8e5d408d84052cefa232a55045fd48affb350d4a3d879096d67c17d0364c6",
+          "bytes": 1400140,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "room_red_armchair",
+      "label": "Red armchair",
+      "title": "Make the armchair vivid red",
+      "prompt": "Make the armchair vivid red",
+      "category": "room",
+      "source": "media/cases/room_red_armchair/source.mp4",
+      "ours": "media/cases/room_red_armchair/ours.mp4",
+      "poster": "media/cases/room_red_armchair/poster.jpg",
+      "sourcePoster": "media/cases/room_red_armchair/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "a38dad39748a69483ea624faa179793a1ba71712c7ac2fa3fdab87f1a2a6cc3c",
+        "ours_video_sha256": "97974141636d5e4081ba3de30013344f6b22453a0efb80303841af6add8e6045",
+        "camera_path_sha256": "3e81029dfd973b8f55538667051ad73f9a0a821c32b00b17ef483f04384faafd",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 2850,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/room_red_armchair/comparison.mp4",
+      "comparisonPoster": "media/cases/room_red_armchair/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "0cab2e4ad61ea3f2abc636f75f3b51eaa149114bed9cfead3868b5baeeeb1077",
+          "bytes": 425330,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "b8e7004e8aa9c974e93593d3597ecbfbdc55aa8f489e6be5e4e9fd16230657cb",
+          "bytes": 434282,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "2c950e908582b93b5dbd048c832dc59a810aba1c143ff08584144eacc9638548",
+          "bytes": 1198878,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "bicycle_orange_frame",
+      "label": "Orange-red bicycle frame",
+      "title": "Make the bicycle frame orange-red",
+      "prompt": "Make the bicycle frame orange-red",
+      "category": "bicycle",
+      "source": "media/cases/bicycle_orange_frame/source.mp4",
+      "ours": "media/cases/bicycle_orange_frame/ours.mp4",
+      "poster": "media/cases/bicycle_orange_frame/poster.jpg",
+      "sourcePoster": "media/cases/bicycle_orange_frame/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "0522874745d3521af652bb19100d179301428009a1cda65ee0b52ba8ab19fe6d",
+        "ours_video_sha256": "a667e236b578e2f1b380c7f61e27d134a41a5ac799aa7b4a0dece5c812ae83f5",
+        "camera_path_sha256": "e57f666193c1c5050bcbac14379698da299434eaf49980e99c808775b8422912",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 3075,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/bicycle_orange_frame/comparison.mp4",
+      "comparisonPoster": "media/cases/bicycle_orange_frame/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "cc19527966e85228d6bab59c2d7ae2bb14408038bdb430ad1629fc1d3c8b3d75",
+          "bytes": 872551,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "55de3d6a000ab60a555c3045c2c17d3f551f061010b514e165f3dadffc5469b6",
+          "bytes": 864518,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "b79c57d22f736fc3a1469efa0416c4e45d03f599b0e93aa27b2a8ab52d61fa37",
+          "bytes": 1636972,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "face_beard",
+      "label": "Full beard",
+      "title": "Add a full beard",
+      "prompt": "Add a full beard",
+      "category": "face",
+      "source": "media/cases/face_reference_sunglasses_ppt/source.mp4",
+      "ours": "media/cases/face_beard/ours.mp4",
+      "poster": "media/cases/face_beard/poster.jpg",
+      "sourcePoster": "media/cases/face_reference_sunglasses_ppt/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "79d88291889e9a75caec3b54d336ddd162d2cb9b242c4e45cb79583e652a44e9",
+        "ours_video_sha256": "4c5b6d51b4424dce8f1b5ef4b0791d8d9b7644e3ca758772f71700347696093f",
+        "camera_path_sha256": "10e4ee7a613c8d68ddb68d501a0341b894c477a66ca51a5547fd14caa2e7668a",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 3300,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/face_beard/comparison.mp4",
+      "comparisonPoster": "media/cases/face_beard/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "8827ac29be148406c4186aee9dd8bdcb62f617d8e5b356893d3536d536ec8424",
+          "bytes": 680764,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "7301e643bab7dd8c445542a4f1bbcc6078311287047292ec87020e4fce4c6aa4",
+          "bytes": 630807,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "61e42990fa88d59df64de0ad26d7dedfba23d94295123daad228aaa6833b662e",
+          "bytes": 1267045,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "garden_gold",
+      "label": "Gold vase",
+      "title": "Make the vase gold",
+      "prompt": "Make the vase gold",
+      "category": "garden",
+      "source": "media/cases/garden_gold/source.mp4",
+      "ours": "media/cases/garden_gold/ours.mp4",
+      "poster": "media/cases/garden_gold/poster.jpg",
+      "sourcePoster": "media/cases/garden_novase/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "5759e8694e88bbd9a703706b4125a47db7c4158ed62f2a882b4fed94f7a07fae",
+        "ours_video_sha256": "f88d0c7f96d5ea36f7c886fcb36fb2d7dd8bcb9fd225ea5718a6b70a627ce413",
+        "camera_path_sha256": "fdcb5bbe0dbda7045f1e1b8975a91d7d06e7ba2d28a4c865af12252d4e569e0f",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 3525,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/garden_gold/comparison.mp4",
+      "comparisonPoster": "media/cases/garden_gold/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "0d2fca2e68987780d34eead0cce326a093855da92eeec39d9f864fb2dc7f4279",
+          "bytes": 836730,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "d0f4a447e29f9a92c4afa7a816d2bd747272f8558c459b0d64689c9cade1c506",
+          "bytes": 818443,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "4924c57401cb25899ae70ae28dfdbeba1efe183de1b7c906185442da82352a75",
+          "bytes": 1305941,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "face_glasses",
+      "label": "Black-framed glasses",
+      "title": "Add black-framed glasses",
+      "prompt": "Add black-framed glasses",
+      "category": "face",
+      "source": "media/cases/face_reference_sunglasses_ppt/source.mp4",
+      "ours": "media/cases/face_glasses/ours.mp4",
+      "poster": "media/cases/face_glasses/poster.jpg",
+      "sourcePoster": "media/cases/face_reference_sunglasses_ppt/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "79d88291889e9a75caec3b54d336ddd162d2cb9b242c4e45cb79583e652a44e9",
+        "ours_video_sha256": "63637be6ee69bdc5d9cf3dedf89bd19abf5d2e086573fb16cb7e432b7b6d3b5a",
+        "camera_path_sha256": "39837d21813e9b9b9c8bafdf4c3261d2c19782338b76a3fe8c1f13f6a433ec73",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 3750,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/face_glasses/comparison.mp4",
+      "comparisonPoster": "media/cases/face_glasses/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "8827ac29be148406c4186aee9dd8bdcb62f617d8e5b356893d3536d536ec8424",
+          "bytes": 680764,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "c806de95a745021385ccd2edb751f4da1bbd82ab0d38daf70009132d21cd1696",
+          "bytes": 636394,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "d823d1b7aff02070608b735be540762a57a5b1142a9496a69517f3c2b67472fc",
+          "bytes": 1249399,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "face_headset",
+      "label": "Over-ear headphones",
+      "title": "Add over-ear headphones",
+      "prompt": "Add over-ear headphones",
+      "category": "face",
+      "source": "media/cases/face_reference_sunglasses_ppt/source.mp4",
+      "ours": "media/cases/face_headset/ours.mp4",
+      "poster": "media/cases/face_headset/poster.jpg",
+      "sourcePoster": "media/cases/face_reference_sunglasses_ppt/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "79d88291889e9a75caec3b54d336ddd162d2cb9b242c4e45cb79583e652a44e9",
+        "ours_video_sha256": "193f6066dfa2c0a8fa0c98e1c712a1dc4789f77dc70087c7e0c80a136a545595",
+        "camera_path_sha256": "1f8c76c7c87e61de54c48fa3a611ffc2f4c2e651e84c8682953bd7fd6da690f6",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 3975,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/face_headset/comparison.mp4",
+      "comparisonPoster": "media/cases/face_headset/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "8827ac29be148406c4186aee9dd8bdcb62f617d8e5b356893d3536d536ec8424",
+          "bytes": 680764,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "86f89d3d05ca98e17dda6967e92f87045e6b8870145580bf22d9905a6a687aab",
+          "bytes": 614797,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "52e7da882a54fcb15bba57616ef4cd5e40af1303fb163b5f3dfba16373f0969e",
+          "bytes": 1255892,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "room_home",
+      "label": "HOME embroidery",
+      "title": "Embroider 'HOME' on the headrest",
+      "prompt": "Embroider 'HOME' on the headrest",
+      "category": "room",
+      "source": "media/cases/room_home/source.mp4",
+      "ours": "media/cases/room_home/ours.mp4",
+      "poster": "media/cases/room_home/poster.jpg",
+      "sourcePoster": "media/cases/room_home/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "bda8fc121062d9183be2842a2438dcf8d45ab2ce883e1b056147b44d01a0cc86",
+        "ours_video_sha256": "c32ebfae3eeab9f3924eb0832bd0e361d6cb02409427e3352449eecff421e293",
+        "camera_path_sha256": "2deeb32c1ad23778ba38a472071bc4c5275870cfd3f9f519f418ddd35cf44f2e",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 4200,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/room_home/comparison.mp4",
+      "comparisonPoster": "media/cases/room_home/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "9fa2b86b0b63b10e8f7d8cf3f6e17f5a3fe72c1f20d52252183c6c89db3ccaef",
+          "bytes": 356315,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "9e9a5b6902bf533040a1dad11b8481b9a4c4629a24eed3fe4aa616e420e3c9db",
+          "bytes": 355786,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "1eaeb8ad69abb2cf731b00eb513f365fe3f2842a9fa57786c7211b4b96447f81",
+          "bytes": 792047,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "face_zombie_supp",
+      "label": "Zombie skin",
+      "title": "Give his face pale-green zombie skin texture",
+      "prompt": "Give his face pale-green zombie skin texture",
+      "category": "face",
+      "source": "media/cases/face_zombie_supp/source.mp4",
+      "ours": "media/cases/face_zombie_supp/ours.mp4",
+      "poster": "media/cases/face_zombie_supp/poster.jpg",
+      "sourcePoster": "media/cases/face_zombie_supp/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "aa5734eba2682c858de99123c3abea928bfa14b05f5177a252a90f87d71f831c",
+        "ours_video_sha256": "4c42629a79c56be05fc9f3a405e47bf40aa093b507cf20a405a8a86628964f7b",
+        "camera_path_sha256": "8fcef258b02d0f34367a74fe6c46a1a9f7457a1be7551ca860a59cae150d2688",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 4425,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/face_zombie_supp/comparison.mp4",
+      "comparisonPoster": "media/cases/face_zombie_supp/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "a43ac439aa8d3b377af21c3c8a568263f7b1fbf41e5a426010bc892fc1919b25",
+          "bytes": 545279,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "e0c914dd6396aeeb0bd43b79ab50599f7279fc0697619ce4fe644578098ade10",
+          "bytes": 451127,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "a429aa0e0c407c983238c43425a59c8089fe149e2d84a279f5c1ad0bd45822a7",
+          "bytes": 1179737,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "garden_white",
+      "label": "White leaves",
+      "title": "Make the leaves white",
+      "prompt": "Make the leaves white",
+      "category": "garden",
+      "source": "media/cases/garden_white/source.mp4",
+      "ours": "media/cases/garden_white/ours.mp4",
+      "poster": "media/cases/garden_white/poster.jpg",
+      "sourcePoster": "media/cases/garden_white/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "5e5cfae5fa35c3e669dcc5468d26d67432dd50e83b1b8d9690678bff23a81217",
+        "ours_video_sha256": "07a495e49394d8dc25997fc9c920e25a7078fbe1959a851069e6601b938602a8",
+        "camera_path_sha256": "2cfbe21905a52c942f4e1ffbb07b4b51f184427454e9724f26647e395f1d1de5",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 4650,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/garden_white/comparison.mp4",
+      "comparisonPoster": "media/cases/garden_white/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "64367e4535356322446d18a161f37a026ae9236bf9fe28a46645a86f8acc7b7c",
+          "bytes": 827063,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "fc76e5d3bc05a00293d62b1ac8c19f9b5297335d81044562c33231d9038c8aeb",
+          "bytes": 798051,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "bb59111b5d615a37ecf38732e03a6183cf816d80dcd24de0c4afd698ad275ba5",
+          "bytes": 1285021,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "person_mask",
+      "label": "Black face mask",
+      "title": "Add a black face mask",
+      "prompt": "Add a black face mask",
+      "category": "person",
+      "source": "media/cases/person_hat2/source.mp4",
+      "ours": "media/cases/person_mask/ours.mp4",
+      "poster": "media/cases/person_mask/poster.jpg",
+      "sourcePoster": "media/cases/person_hat2/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "92e31f86a3e8a3649ebb42ffab1400a5c9155d3cfb1849c2a72759f21ae29b59",
+        "ours_video_sha256": "9f8f094868769f823cfabe32e4704d8961af7ccc824e53859e051c49ad88c198",
+        "camera_path_sha256": "01850497a91ce7b90c22b0747e459316db197fa18098b2a651e0ff8e999f79f8",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 4875,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/person_mask/comparison.mp4",
+      "comparisonPoster": "media/cases/person_mask/comparison.jpg",
+      "media": {
+        "source": {
+          "sha256": "8a136baa76f38f36d8255f4c3ca0ce50dbbd07d1e7bf886cff60485cf4079b61",
+          "bytes": 350119,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "ee541274ab7cdd60661512cc88c9d4e30b982e702f70e5b5c0485bc34ff5939d",
+          "bytes": 349844,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "420e77cc7c9a0ac2f18959a1482d5f463e6a0ca312d624319b6cfbc8d5d9aaa8",
+          "bytes": 844727,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    },
+    {
+      "id": "face_goldchain_ai",
+      "label": "Golden chain",
+      "title": "Man wearing a golden chain",
+      "prompt": "Man wearing a golden chain",
+      "category": "face",
+      "source": "media/cases/face_goldchain_ai/source.mp4",
+      "ours": "media/cases/face_goldchain_ai/ours.mp4",
+      "poster": "media/cases/face_goldchain_ai/poster.jpg",
+      "sourcePoster": "media/cases/face_goldchain_ai/source.jpg",
+      "duration": 8.0,
+      "width": 768,
+      "height": 384,
+      "provenance": {
+        "source_video_sha256": "e9dafd4f88ab951692bed7533c73c684d5e57b46ab098b5156dad3d16a5e64e4",
+        "ours_video_sha256": "88804a918d17177ef427d819d482775b05808a8abd1127f22679ee1dd34ed2af",
+        "camera_path_sha256": "00ca0aa0ffff213726d1a08124a8680201fa7816c71101195c7fbaf316d9328d",
+        "native_frame_count": 240,
+        "native_size": [
+          1280,
+          640
+        ],
+        "playback_speed": 1,
+        "render_stage": "final_edited_3d_render",
+        "comparison": {
+          "demo_start_frame": 5100,
+          "frame_count": 225,
+          "duration": 7.5,
+          "labels": "Original generic Baseline labels retained."
+        }
+      },
+      "comparison": "media/cases/face_goldchain_ai/comparison.mp4",
+      "comparisonPoster": "media/cases/face_goldchain_ai/comparison.jpg",
+      "reference": {
+        "src": "media/cases/face_goldchain_ai/reference.png",
+        "label": "User provided",
+        "sha256": "7d8be54519b44da915954a596355c75208aab54451c8f96509e1d96ca82dd506",
+        "provenance": "Original user-provided image from the demo manifest; bytes unchanged."
+      },
+      "media": {
+        "source": {
+          "sha256": "bf9f18b131dceec7b4b2c720df1902d9bb7c0d9f223de71488cdd30b5f024564",
+          "bytes": 747543,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "ours": {
+          "sha256": "395517e14a2715488cfff5a6e4b43abb49097ae4d441a8a3df58eabea0cac436",
+          "bytes": 691221,
+          "width": 768,
+          "height": 384,
+          "frames": 240,
+          "fps": "30/1",
+          "duration": 8.0,
+          "audio": false
+        },
+        "comparison": {
+          "sha256": "3b97520c84a94e198c04fe1203e36f0a50885c4efbed29e87400b6a6370f4b1d",
+          "bytes": 1566918,
+          "width": 1280,
+          "height": 720,
+          "frames": 225,
+          "fps": "30/1",
+          "duration": 7.5,
+          "audio": false
+        }
+      }
+    }
+  ],
+  "provenance": {
+    "source_manifest": "demo/manifest.json",
+    "source_manifest_sha256": "13fe8913c84f7fe51429729e833f056c3f60a068f899a2264a8dca5063506b68",
+    "source_demo_sha256": "63348ebcfae31a50a4de99db37cd7d56dfa99ae5e2b6d60a9d965df3af237beb",
+    "case_selection": "All 20 arXiv body cases; bear glasses and the hat-and-mask case appear only in the 22-case overview.",
+    "processing": "Complete frames; proportional scaling and H.264 compression. Fangzhou source and edited clips play at half speed. No synthesized views, crops, or image edits.",
+    "category_source": "Original scene identity from each manifest case ID."
+  }
+}

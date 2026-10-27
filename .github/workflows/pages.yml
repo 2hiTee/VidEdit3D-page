@@ -1,0 +1,45 @@
+name: Publish project page (public)
+
+# Publishing Pages makes the website public even if this repository is private.
+# There is deliberately no automatic deployment on push.
+on:
+  workflow_dispatch:
+    inputs:
+      publish_public_site:
+        description: 'Publish this website publicly on GitHub Pages'
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: ${{ inputs.publish_public_site }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Package website files
+        run: |
+          mkdir -p .pages
+          cp index.html style.css app.js favicon.svg .pages/
+          cp -R media .pages/media
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: .pages
+      - name: Publish
+        id: deployment
+        uses: actions/deploy-pages@v4
